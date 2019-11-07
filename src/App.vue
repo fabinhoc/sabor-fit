@@ -1,60 +1,46 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+    <v-app-bar :light="true" color="white darken-2" app>
+      <v-toolbar-title>
+        <v-img width="140" src="./assets/logo.png"></v-img>
+      </v-toolbar-title>
+      <div class="flex-grow-1"></div>
+      <v-toolbar-items class="mr-8">
+        <v-btn text>Link 1</v-btn>
+        <v-btn text>Link 2</v-btn>
+        <v-btn text>Link 3</v-btn>
+      </v-toolbar-items>
+      <v-btn icon>
+        <v-badge :left="true" color="green accent-4">
+          <template v-slot:badge>0</template>
+          <v-icon color="orange darken-2">mdi-cart</v-icon>
+        </v-badge>
+      </v-btn>
+      <v-btn icon>
+        <v-icon color="orange darken-2">mdi-account</v-icon>
       </v-btn>
     </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
+    <v-content class="sabor-fit">
+      <v-container fluid>asdfasdffadfs</v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
   data: () => ({
-    //
-  }),
+    logo: ""
+  })
 };
 </script>
+
+<style lang="scss" scoped>
+.sabor-fit {
+  background-image: url("./assets/bg-sabor-fit.png");
+  background-repeat: repeat-x;
+}
+</style>
